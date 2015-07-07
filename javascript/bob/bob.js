@@ -6,9 +6,13 @@
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
-//
-// YOUR CODE GOES HERE
-//
-};
+  console.log("This is:" + input.charAt(-1));
+  if(input == input.toUpperCase()) {
+    return "Whoa, chill out!"
+  } else if(input.endsWith("?")) {
+    return "Sure."
+  } else
+    return "Whatever."
+}
 
 module.exports = Bob;
