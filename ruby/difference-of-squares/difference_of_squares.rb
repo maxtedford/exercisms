@@ -1,8 +1,7 @@
 class Squares
-attr_reader :num, :set
+attr_reader :set
   
   def initialize(num)
-    @num = num
     @set = (1..num).to_a
   end
   
