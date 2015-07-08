@@ -6,11 +6,11 @@ attr_reader :set
   end
   
   def square_of_sums
-    set.inject(0, &:+) ** 2
+    set.inject(:+) ** 2
   end
   
   def sum_of_squares
-    set.map{|num| num**2}.inject(0, &:+)
+    set.map{|num| num**2}.inject(:+)
   end
   
   def difference
