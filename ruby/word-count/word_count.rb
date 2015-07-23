@@ -6,7 +6,7 @@ attr_reader :phrase
   end
 
   def words
-    phrase.split
+    phrase.split(/\W+/).map { |word| word.downcase }
   end
   
   def word_count
