@@ -5,11 +5,11 @@ attr_reader :phrase
     @phrase = phrase
   end
 
-  def to_array
-    phrase.include?(" ") ? phrase.split : phrase
+  def words
+    phrase.split
   end
   
   def word_count
-    phrase.include?(" ") ? to_array.group_by{ |word| word } : { phrase => 1 }
+    words.inject(Hash.new(0)){ |hash, word| hash[word] += 1; hash }
   end
 end
