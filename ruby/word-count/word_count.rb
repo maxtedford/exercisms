@@ -6,7 +6,7 @@ attr_reader :phrase
   end
 
   def words
-    phrase.split(/\W+/).map { |word| word.downcase }
+    phrase.downcase.gsub(/[^a-z\d\s']/i, " ").split(" ")
   end
   
   def word_count
